@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo App</title>
+    <link rel="icon" href="pics/document-03-512.webp" type="image/icon">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.18.0/firebase-database.js"></script>
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+          apiKey: "AIzaSyD-O4jzxLkyUUazDlPO_GDsJmYnFpDqvAw",
+          authDomain: "todo-firebase-9d9d5.firebaseapp.com",
+          databaseURL: "https://todo-firebase-9d9d5.firebaseio.com",
+          projectId: "todo-firebase-9d9d5",
+          storageBucket: "todo-firebase-9d9d5.appspot.com",
+          messagingSenderId: "717709501263",
+          appId: "1:717709501263:web:7bf800b75d9b07e1f2db3a",
+          measurementId: "G-X6ZK6GHVWQ"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+      </script>
+</head>
+<body>
+<div class="body">
+    <div class="icon">
+        <img src="pics/document-03-512.webp" width="50px">
+        <h1 style="color: white;"> ToDo App </h1>
+    </div>
+    
+    <input placeholder="Enter Your Roteen" type="text" id="todo-item">
+    <i class="fa fa-plus-circle fa-lg" id="icon1" aria-hidden="true" onclick="addToDo()"></i>
+    <i class="fa fa-trash fa-lg" id="icon2" aria-hidden="true" onclick="deleteAll()"></i>
+    
+    <div>
+        <ol id="list" class="listt">
+        
+        </ol>
+    </div>
+
+</div>
+</body>
+<script src="app.js"></script>
+
+</body>
+</html>
